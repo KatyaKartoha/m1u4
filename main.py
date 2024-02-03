@@ -33,17 +33,28 @@ def attack_pok(message):
             bot.send_message(message.chat.id, "Сражаться можно только с покемонами")
     else:
             bot.send_message(message.chat.id, "Чтобы атаковать, нужно ответить на сообщения того, кого хочешь атаковать")
-            bot.send_message(message.chat.id, pokemon.info())
-            bot.send_photo(message.chat.id, pokemon.show_img())
-            bot.send_message(message.chat.id, pokemon.lvl())
+            #bot.send_message(message.chat.id, pokemon.info())
+            #bot.send_photo(message.chat.id, pokemon.show_img())
+            #bot.send_message(message.chat.id, pokemon.lvl())
 
-@bot.message_handler(commands=['feed'])
-def feed(message):
+
+
+#@bot.message_handler(commands=['feed'])
+#def feed(message):
+    #if message.from_user.username in Pokemon.pokemons.keys():
+        #pokemon = Pokemon(message.from_user.username)
+        #bot.send_message(message.chat.id, pokemon.feed())    
+    #else:
+        #bot.reply_to(message, "Ты ещё не создал себе покемона")
+
+@bot.message_handler(commands=['info'])
+def start(message):
     if message.from_user.username in Pokemon.pokemons.keys():
-        pokemon = Pokemon(message.from_user.username)
-        bot.send_message(message.chat.id, pokemon.feed())    
+        pok = Pokemon.pokemons[message.from_user.username]
+        bot.send_message(message.chat.id, pok.info())
     else:
-        bot.reply_to(message, "Ты ещё не создал себе покемона")  
+        bot.reply_to(message, "Ты ещё не создал себе покемона")
+
 
 #@bot.message_handler(commands=['train'])
 #def train(message):
