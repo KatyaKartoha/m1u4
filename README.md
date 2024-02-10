@@ -1,4 +1,4 @@
-# Pocketmon fights 3135
+# Pocketmon
 ## _Your pocket pokemon_:feather:
 
 Create your **own** pet to train and play with. Take care of your pokemon so in the future it will take care of your enemies!
@@ -7,7 +7,7 @@ If you aren't interested yet, then learn [more about pokemons](https://www.pokem
 Here you can:
 - Make new friends
 * Kill your time and enemies witout going to jail
-- Enjoy some pokemon content
+- Create your own pokemon
 
 ![Pockemon](https://jewelsathome.files.wordpress.com/2015/09/pocket-full-of-monsters_large.jpg)
 
